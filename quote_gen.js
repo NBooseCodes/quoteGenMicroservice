@@ -1,10 +1,20 @@
+const http = require('http');
+const express = require('express');
+const { type } = require('os');
+
+const app = express();
+app.use(express.urlencoded({extended: true}));
+app.use(express.static('public'));
+
+
+
 // This is a basic quote generator
 function getRandomInt(max) {
     return Math.floor(Math.random() * max) 
 };
 
 
-function quoteSelector (type, randNum) {
+function quoteSelector (type) {
 
 
     let weatherQuotesDict = 
@@ -46,6 +56,13 @@ function quoteSelector (type, randNum) {
     }
 
     let quoteObj = {quote: weatherQuotesDict[randomNum].key, author: weatherQuotesDict[randomNum].value};
+
     return quoteObj;
 
 }
+
+app.post("/", function(req, res) {
+    let quoteType = req.body.type
+    let response = quoteSelector(quoteType)
+    res.send(response);
+})
