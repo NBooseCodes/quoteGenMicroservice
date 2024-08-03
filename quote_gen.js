@@ -56,7 +56,7 @@ function quoteSelector (type) {
 
     let quoteObj = {quote: weatherQuotesDict[randomNum].key, author: weatherQuotesDict[randomNum].value};
 
-    return quoteObj;
+    return JSON(quoteObj);
 
 }
 
