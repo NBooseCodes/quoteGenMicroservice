@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
-
+const PORT = process.env.PORT || 5001
 
 
 // This is a basic quote generator
@@ -65,3 +65,5 @@ app.post("/", function(req, res) {
     let response = quoteSelector(quoteType)
     res.send(response);
 }) 
+
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
