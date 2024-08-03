@@ -64,4 +64,4 @@ app.post("/", function(req, res) {
     let quoteType = req.body.type
     let response = quoteSelector(quoteType)
     res.send(response);
-})
+}) 
