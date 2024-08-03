@@ -2,7 +2,7 @@
   "name": "microservices",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "quote_gen.js",
   "scripts": {
     "dev": "nodemon index.js"
   },
