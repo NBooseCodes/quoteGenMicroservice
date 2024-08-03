@@ -1,6 +1,5 @@
 const http = require('http');
 const express = require('express');
-const { type } = require('os');
 
 const app = express();
 app.use(express.urlencoded({extended: true}));
