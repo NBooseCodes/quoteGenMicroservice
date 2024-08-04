@@ -14,7 +14,7 @@ function getRandomInt(max) {
 
 
 function quoteSelector (type) {
-    return "Hit quoteSelector"
+    
 
     let weatherQuotesDict = 
     {
@@ -63,6 +63,7 @@ function quoteSelector (type) {
 app.get("/", function(req, res) {
     console.log(req.body)
     let quoteType = req.body.type
+    console.log(quoteType)
     let response = quoteSelector(quoteType)
     res.send(response);
 }) 
