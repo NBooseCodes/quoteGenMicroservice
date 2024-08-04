@@ -68,6 +68,9 @@ app.post("/", function(req, res) {
     res.send("hello world! - post req")
 }) 
 
+app.get("/data", function(req, res){
+    res.send("Hit Data Route")
+})
 app.post("/data", function(req, res) {
     console.log(req.body)
     res.send(req.body)
