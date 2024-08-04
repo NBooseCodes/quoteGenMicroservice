@@ -69,9 +69,10 @@ app.get("/", function(req, res) {
     return quoteType
 }) 
 
-app.get("/data", function(req, res) {
+app.post("/data", function(req, res) {
     console.log(req.body)
     res.send(req.body)
+    return req.body
 })
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
