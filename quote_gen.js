@@ -74,8 +74,7 @@ app.get("/data", function(req, res){
 
 app.post("/data", function(req, res) {
     
-    console.log("This is the req: " + JSON.stringify(req))
-    console.log(req.body)
+    console.log(req)
     res.send(req.body)
     return req.body
 })
