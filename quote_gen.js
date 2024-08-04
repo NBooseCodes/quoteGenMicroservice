@@ -60,8 +60,12 @@ function quoteSelector (type) {
 
 }
 
-app.get("/", function(req, res) {
-    res.send("hello world!")
+app.get("/", function(req, res){
+    res.send("HELLO WORLD - GET REQ")
+})
+
+app.post("/", function(req, res) {
+    res.send("hello world! - post req")
 }) 
 
 /*app.post("https://quote-app-nmcc-126cfc367283.herokuapp.com/data", function(req, res) {
