@@ -71,7 +71,9 @@ app.post("/", function(req, res) {
 app.get("/data", function(req, res){
     res.send("Hit Data Route")
 })
+
 app.post("/data", function(req, res) {
+    console.log("This is the req: " + req)
     console.log(req.body)
     res.send(req.body)
     return req.body
