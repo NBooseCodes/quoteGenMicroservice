@@ -60,7 +60,7 @@ function quoteSelector (type) {
 
 }
 
-app.post("/", function(req, res) {
+app.get("/", function(req, res) {
     console.log(req.body)
     let quoteType = req.body.type
     let response = quoteSelector(quoteType)
