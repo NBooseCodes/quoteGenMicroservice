@@ -61,18 +61,13 @@ function quoteSelector (type) {
 }
 
 app.get("/", function(req, res) {
-    console.log(req.body)
-    let quoteType = req.body.type
-    console.log(quoteType)
-    let response = quoteSelector(quoteType)
-    res.send(response);
-    return quoteType
+    res.send("hello world!")
 }) 
 
-app.post("https://quote-app-nmcc-126cfc367283.herokuapp.com/data", function(req, res) {
+/*app.post("https://quote-app-nmcc-126cfc367283.herokuapp.com/data", function(req, res) {
     console.log(req.body)
     res.send(req.body)
     return req.body
-})
+})*/
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
