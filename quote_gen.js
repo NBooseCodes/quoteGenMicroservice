@@ -15,7 +15,8 @@ function getRandomInt(max) {
 
 function quoteSelector (type) {
     
-
+    
+    return {1: "This is an object"};
     let weatherQuotesDict = 
     {
         "Wherever you go, no matter what the weather, always bring your own sunshine.":"Anthony J. D'Angelo",
@@ -50,13 +51,13 @@ function quoteSelector (type) {
     }
 
     if (type === "inspiration") {
-        let quoteObj = {quote: inspirationalQuotesDict[randomNum].key, author: inspirationalQuotesDict[randomNum].value};
+        let quoteObj = {quote: inspirationalQuotesDict[randomNum], author: inspirationalQuotesDict[randomNum]};
         return quoteObj;
     }
 
-    let quoteObj = {quote: weatherQuotesDict[randomNum].key, author: weatherQuotesDict[randomNum].value};
+    let quoteObj = {quote: weatherQuotesDict[randomNum], author: weatherQuotesDict[randomNum]};
 
-    return JSON(quoteObj);
+    return {1: "This is an object"};
 
 }
 
