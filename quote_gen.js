@@ -14,7 +14,7 @@ function getRandomInt(max) {
 
 
 function quoteSelector (type) {
-
+    return "Hit quoteSelector"
 
     let weatherQuotesDict = 
     {
@@ -44,12 +44,12 @@ function quoteSelector (type) {
     }
     let randomNum = getRandomInt(4);
 
-    if (type == "business") {
-        let quoteObj = {quote: businessQuoteDict[randomNum].key, author: businessQuoteDict[randomNum].value} 
+    if (type === "business") {
+        let quoteObj = {quote: businessQuoteDict[randomNum], author: businessQuoteDict[randomNum]} 
         return quoteObj
     }
 
-    if (type == "inspiration") {
+    if (type === "inspiration") {
         let quoteObj = {quote: inspirationalQuotesDict[randomNum].key, author: inspirationalQuotesDict[randomNum].value};
         return quoteObj;
     }
@@ -60,7 +60,8 @@ function quoteSelector (type) {
 
 }
 
-app.get("/", function(req, res) {
+app.post("/", function(req, res) {
+    console.log(req.body)
     let quoteType = req.body.type
     let response = quoteSelector(quoteType)
     res.send(response);
