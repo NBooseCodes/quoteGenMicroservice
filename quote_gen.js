@@ -68,10 +68,10 @@ app.post("/", function(req, res) {
     res.send("hello world! - post req")
 }) 
 
-/*app.post("https://quote-app-nmcc-126cfc367283.herokuapp.com/data", function(req, res) {
+app.post("https://quote-app-nmcc-126cfc367283.herokuapp.com/data", function(req, res) {
     console.log(req.body)
     res.send(req.body)
     return req.body
-})*/
+})
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
