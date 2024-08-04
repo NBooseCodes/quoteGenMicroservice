@@ -62,13 +62,14 @@ function quoteSelector (type) {
 
 app.get("/", function(req, res) {
     console.log(req.body)
+    res.redirect('data')
     /*let quoteType = req.body.type
     console.log(quoteType)
     let response = quoteSelector(quoteType)
     res.send(response);*/
 }) 
 
-app.post("/data", function(req, res) {
+app.get("/data", function(req, res) {
     console.log(req.body)
 })
 
