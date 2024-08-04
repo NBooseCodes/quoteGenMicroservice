@@ -16,7 +16,6 @@ function getRandomInt(max) {
 function quoteSelector (type) {
     
     
-    return {1: "This is an object"};
     let weatherQuotesDict = 
     {
         "Wherever you go, no matter what the weather, always bring your own sunshine.":"Anthony J. D'Angelo",
@@ -57,16 +56,20 @@ function quoteSelector (type) {
 
     let quoteObj = {quote: weatherQuotesDict[randomNum], author: weatherQuotesDict[randomNum]};
 
-    return {1: "This is an object"};
+    
 
 }
 
 app.get("/", function(req, res) {
     console.log(req.body)
-    let quoteType = req.body.type
+    /*let quoteType = req.body.type
     console.log(quoteType)
     let response = quoteSelector(quoteType)
-    res.send(response);
+    res.send(response);*/
 }) 
+
+app.post("/data", function(req, res) {
+    console.log(req.body)
+})
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
