@@ -1,7 +1,7 @@
 const http = require('http');
 const express = require('express');
 
-const app = express.Router();
+const app = express;
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
 const PORT = process.env.PORT || 5001
