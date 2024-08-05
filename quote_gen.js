@@ -92,7 +92,8 @@ app.post("/data", function(req, res) {
     
     //console.log(req)
     let data = req.body
-    console.log(Object.keys(data))
+    let arr = Object.keys(data)[0]
+    console.log(arr)
     console.log(data)
     console.log(data["test"])
 
