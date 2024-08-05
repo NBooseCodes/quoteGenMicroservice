@@ -92,7 +92,7 @@ app.post("/data", function(req, res) {
     
     //console.log(req)
     let data = req.body
-    console.log(data[0])
+    console.log(data["test"])
 
 })
 
