@@ -96,6 +96,7 @@ app.post("/data", function(req, res) {
     console.log(arr)
     parsedJSON = JSON.parse(arr)
     console.log(parsedJSON["test"])
+    res.send(JSON.stringify(parsedJSON))
 
 })
 
