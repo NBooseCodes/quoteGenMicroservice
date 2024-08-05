@@ -94,8 +94,8 @@ app.post("/data", function(req, res) {
     let data = req.body
     let arr = Object.keys(data)[0]
     console.log(arr)
-    JSON.parse(arr)
-    console.log(arr["test"])
+    parsedJSON = JSON.parse(arr)
+    console.log(parsedJSON["test"])
 
 })
 
