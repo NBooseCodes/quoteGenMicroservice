@@ -92,6 +92,7 @@ app.post("/data", function(req, res) {
     
     //console.log(req)
     let data = req.body
+    console.log(Object.keys(data))
     console.log(data)
     console.log(data["test"])
 
