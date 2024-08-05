@@ -75,7 +75,8 @@ app.get("/data", function(req, res){
 app.post("/data", function(req, res) {
     
     //console.log(req)
-    res.send(req)
+    const request = JSON.stringify(req);
+    res.send(request)
 })
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
