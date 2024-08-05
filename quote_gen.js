@@ -94,7 +94,6 @@ app.post("/data", function(req, res) {
     
     console.log(req)
     console.log(req.body)
-    console.log(request)
     res.send(JSON.stringify({thng: "hello"}))
 })
 
