@@ -75,7 +75,7 @@ app.get("/data", function(req, res){
 app.post("/data", function(req, res) {
     
     //console.log(req)
-    res.send("THis is from heroku")
+    res.send(req)
 })
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
