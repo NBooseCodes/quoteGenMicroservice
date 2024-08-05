@@ -91,9 +91,10 @@ app.get("/data", function(req, res){
 app.post("/data", function(req, res) {
     
     //console.log(req)
-    const request = JSON.stringify(req.body);
+    const request = JSON.parse(req.body);
     console.log(req)
     console.log(req.body)
+    console.log(request)
     res.send(JSON.stringify({thng: "hello"}))
 })
 
