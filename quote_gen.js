@@ -93,7 +93,8 @@ app.post("/data", function(req, res) {
     //console.log(req)
     const request = JSON.stringify(req.body);
     console.log(req)
-    res.send({thng: "hello"})
+    console.log(req.body)
+    res.send(JSON.stringify({thng: "hello"}))
 })
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
