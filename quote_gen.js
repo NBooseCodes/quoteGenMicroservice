@@ -75,7 +75,7 @@ app.get("/data", function(req, res){
 app.post("/data", function(req, res) {
     
     //console.log(req)
-    const request = JSON.stringify(req);
+    const request = JSON.stringify(req.body);
     res.send(request)
 })
 
