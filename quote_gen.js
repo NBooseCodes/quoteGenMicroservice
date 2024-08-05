@@ -91,7 +91,7 @@ app.get("/data", function(req, res){
 app.post("/data", function(req, res) {
     
     //console.log(req)
-    const request = JSON.parse(req);
+    
     console.log(req)
     console.log(req.body)
     console.log(request)
