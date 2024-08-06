@@ -104,9 +104,16 @@ app.post("/data", function(req, res) {
     let data = req.body
     console.log(FormData)
     let arr = Object.keys(data)[0]
-    parsedJSON = JSON.parse(arr)
+    if (arr) {
+        parsedJSON = JSON.parse(arr)
+        let quoteData = quoteSelector(parsedJSON["type"])
+        res.send(JSON.stringify(quoteData))
+    } else {
+        res.send(JSON.stringify(quoteSelector()))
+    }
+    /*parsedJSON = JSON.parse(arr)
     let quoteData = quoteSelector(parsedJSON["type"])
-    res.send(JSON.stringify(quoteData))
+    res.send(JSON.stringify(quoteData))*/
 
 })
 
