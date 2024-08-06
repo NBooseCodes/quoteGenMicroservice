@@ -101,8 +101,8 @@ app.get("/data", function(req, res){
 
 app.post("/data", function(req, res) {
     
-    //console.log(req)
     let data = req.body
+    console.log(FormData)
     let arr = Object.keys(data)[0]
     parsedJSON = JSON.parse(arr)
     let quoteData = quoteSelector(parsedJSON["type"])
