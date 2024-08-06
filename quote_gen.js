@@ -30,9 +30,51 @@ function getRandomInt(max) {
 
 
 function quoteSelector (type) {
-    
-    
-    let weatherQuotesDict = 
+    const bizQuote = {
+        1: {
+          author: 'Colin Powell',
+          quote: 'There are no secrets to success. It is the result of preparation, hard work, and learning from failure.'
+        },
+        2: {
+          author: 'Sanford I. Well',
+          quote: 'Details create the big picture.'
+        },
+        3: {
+            author: 'Edward Gibbon',
+            quote: 'Our work is the presentation of our capabilities.' 
+        }
+      }
+
+      const inspoQuote = {
+        1: {
+          author: 'Theodore Roosevelt',
+          quote: 'Believe you can and you\'re halfway there.'
+        },
+        2: {
+          author: 'Eleanor Roosevelt',
+          quote: 'Do one thing every day that scares you.'
+        },
+        3: {
+            author: 'Michael Jordan',
+            quote: 'Earn your leadership every day.'
+        }
+      }
+
+        const weatherQuote = {
+        1: {
+            author: 'Anthony J. D\'Angelo',
+            quote: 'Wherever you go, no matter what the weather, always bring your own sunshine.'
+            },
+        2: {
+            author: 'Carl Reiner',
+            quote: 'A lot of people like snow. I find it to be an unnecessary freezing of water.'
+            },
+        3: {
+            author: 'Bill Bowerman',
+            quote: 'There\'s no such thing as bad weather, just soft people.'
+        }
+    }
+    /*let weatherQuotesDict = 
     {
         "Wherever you go, no matter what the weather, always bring your own sunshine.":"Anthony J. D'Angelo",
         "There's no such thing as bad weather, just soft people.":"Bill Bowerman",
@@ -41,24 +83,19 @@ function quoteSelector (type) {
         "Summer in the deep South is not only a season, a climate, it's a dimension. Floating in it, one must be either proud or submerged.":"Eugene Walter"
     };
 
-    let businessQuoteDict = 
+   /* let businessQuoteDict = 
     {
         "There are no secrets to success. It is the result of preparation, hard work, and learning from failure.":"Colin Powell",
         "A brand for a company is like a reputation for a person. You earn reputation by trying to do hard things well.":"Jeff Bezos",
         "Details create the big picture.":"Sanford I. Well",
         "Our work is the presentation of our capabilities.":"Edward Gibbon",
         "The first responsibility of a leader is to define reality. The last is to say thank you. In between, the leader is a servant.":"Max de Pree"
-    };
+    };*/
 
-    let inspirationalQuotesDict = 
-    {
-        "Believe you can and you're halfway there.":"Theodore Roosevelt",
-        "Do one thing every day that scares you.":"Eleanor Roosevelt",
-        "If you can dream it, you can do it.":"Walt Disney",
-        "Even if you are on the right track, you'll get run over if you just sit there.":"Will Rogers",
-        "Earn your leadership every day.":"Michael Jordan"
-    }
+
+
     let randomNum = getRandomInt(4);
+    console.log(randomNum)
 
     if (type === "business") {
         let quoteObj = {quote: businessQuoteDict[randomNum], author: businessQuoteDict[randomNum]} 
@@ -69,8 +106,6 @@ function quoteSelector (type) {
         let quoteObj = {quote: inspirationalQuotesDict[randomNum], author: inspirationalQuotesDict[randomNum]};
         return quoteObj;
     }
-
-    let quoteObj = {quote: weatherQuotesDict[randomNum], author: weatherQuotesDict[randomNum]};
 
     
 
