@@ -102,7 +102,7 @@ app.get("/data", function(req, res){
 app.post("/data", function(req, res) {
     
     let data = req.body
-    console.log(FormData)
+
     let arr = Object.keys(data)[0]
     if (arr) {
         parsedJSON = JSON.parse(arr)
