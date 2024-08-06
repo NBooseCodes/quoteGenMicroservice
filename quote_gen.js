@@ -94,20 +94,16 @@ function quoteSelector (type) {
 
 
 
-    let randomNum = getRandomInt(4);
+    let randomNum = getRandomInt(3);
     console.log(randomNum)
 
     if (type === "business") {
-        let quoteObj = {quote: businessQuoteDict[randomNum], author: businessQuoteDict[randomNum]} 
-        return quoteObj
+        return bizQuote[randomNum]
+    } else if (type === "inspiration") {
+        return inspoQuote[randomNum]
+    } else {
+        return weatherQuote[randomNum]
     }
-
-    if (type === "inspiration") {
-        let quoteObj = {quote: inspirationalQuotesDict[randomNum], author: inspirationalQuotesDict[randomNum]};
-        return quoteObj;
-    }
-
-    
 
 }
 
@@ -131,8 +127,8 @@ app.post("/data", function(req, res) {
     console.log(arr)
     parsedJSON = JSON.parse(arr)
     console.log(parsedJSON["test"])
-    quoteSelector()
-    res.send(JSON.stringify(parsedJSON))
+    let quoteData = quoteSelector()
+    res.send(JSON.stringify(quoteData))
 
 })
 
