@@ -24,3 +24,5 @@ How to Receive Data
 2. So, to receive data, all you need to do is wait for the getQuote() function to return and store the value of the return statement in a variable.
 3. This is already in the index.js file for you in the line: getQuote().then((data => console.log(data))). This line stores the result of the function call in a variable called ‘data’.
 From here, you can use ‘data’ like you would any JSON object. You should be able to extract the quote and author quite easily.
+
+![UML diagram](https://github.com/user-attachments/assets/d77151c5-d498-40fa-b9b6-fc1bc794ed4e)
