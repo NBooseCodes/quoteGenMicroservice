@@ -127,7 +127,7 @@ app.post("/data", function(req, res) {
     console.log(arr)
     parsedJSON = JSON.parse(arr)
     console.log(parsedJSON["type"])
-    let quoteData = quoteSelector()
+    let quoteData = quoteSelector(parsedJSON["type"])
     res.send(JSON.stringify(quoteData))
 
 })
